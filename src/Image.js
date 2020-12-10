@@ -2,6 +2,10 @@ import React, { useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios'
 
+const ImageStyle = styled.img`
+    border: 1px dotted gold;
+ `
+
 const Image = () => {
     const [image, setImage] = useState("")
 
@@ -16,8 +20,9 @@ const Image = () => {
     }, []) 
 
     return (
-        // <iframe width="420" height="315" src={videoURL} ></iframe>
-        <img width="420" height="315" src={image} ></img>
+        <ImageStyle>
+            <img width="420" height="315" src={image} alt="space" ></img>
+        </ImageStyle>
     )
 }
 

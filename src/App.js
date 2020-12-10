@@ -1,5 +1,7 @@
-import React, { useState, useEffect} from "react";
-import "./App.css";
+import React from "react";
+// import "./App.css";
+// import theme from "./theme.js"
+
 import Title from './Title.js'
 import Date from './Date.js'
 import Explanation from './Explanation.js'
@@ -8,18 +10,20 @@ import Image from './Image.js'
 function App() {
   
   return (
-    <div className="App">
+    
+      <div className="App">
 
-      <Title />
+        <Title />
+          
+        <Date />
         
-      <Date />
-       
-      <Image />
+        <Image />
 
-      <Explanation />
-      
-    </div>
-  );
+        <Explanation />
+        
+      </div>
+    
+  )
 }
 
 export default App;

@@ -1,6 +1,11 @@
 import React, { useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios'
+import styled from 'styled-components'
+
+const TitleStyle = styled.h2`
+    color: red;
+ `
 
 const Title = () => {
     const [title, setTitle] = useState("")
@@ -16,7 +21,9 @@ const Title = () => {
     }, []) 
     
     return (
-        <h2>{title}</h2>
+        <TitleStyle>
+            <h2>{title}</h2>
+        </TitleStyle>
     )
 }
 export default Title
