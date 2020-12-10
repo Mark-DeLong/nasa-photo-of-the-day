@@ -1,10 +1,16 @@
 import React, { useState, useEffect} from "react";
-import "./App.css";
 import axios from 'axios'
 import styled from 'styled-components'
 
 const TitleStyle = styled.h2`
     color: red;
+    background-color: yellow;
+    &:hover {
+        color: green;
+        background-color: cyan;
+        transition: all 0.5s ease-in-out;
+      }
+      transition: all 0.5s ease-in-out;
  `
 
 const Title = () => {

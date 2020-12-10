@@ -1,6 +1,13 @@
 import React, { useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios'
+import styled from 'styled-components'
+
+const DateStyle = styled.p`
+    border: 1px solid gold;
+    max-width: 20%;
+    margin-left: 40%;
+ `
 
 const Date = () => {
     const [date, setDate] = useState("")
@@ -16,7 +23,9 @@ const Date = () => {
     }, []) 
 
     return (
-        <p>{date}</p>
+        <DateStyle>
+            <p>{date}</p>
+        </DateStyle>
     )
 }
 

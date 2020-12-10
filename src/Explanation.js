@@ -1,6 +1,18 @@
 import React, { useState, useEffect} from "react";
-import "./App.css";
 import axios from 'axios'
+import styled from 'styled-components'
+
+const ExplanationStyle = styled.p`
+    border: 1px dotted navy;
+    max-width: 80%;
+    margin-left: 10%;
+    &:hover {
+        max-width: 90%;
+        margin-left: 5%;
+        transition: all 0.5s ease-in-out;
+      }
+      transition: all 0.5s ease-in-out;
+ `
 
 const Explanation = () => {
     const [explanation, setExplanation] = useState("")
@@ -17,7 +29,9 @@ const Explanation = () => {
     }, []) 
 
     return (
-        <p>{explanation}</p>
+        <ExplanationStyle>
+            <p>{explanation}</p>
+        </ExplanationStyle>
     )
 }
 
